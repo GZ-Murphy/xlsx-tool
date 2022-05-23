@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>删列工具</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" href="src/bootstrap-4.6.1-dist/css/bootstrap.min.css""/>
+</head>
+<body>
+  <div class="alert alert-primary w-100" role="alert"  id="info-bar"  >
+    把文件放在 ..\resources\app\input\ 里面
+  </div>
+  
+  <div class=" d-flex p-2 bd-highlight container">
+  <form onsubmit="deleteColumn(event)" class="w-100">
+    <div class="form-group">
+      <div class="p-2 bd-highlight">
+        <label for="Password1">密码 (必填)</label>
+        <input type="text" class="form-control" required id="Password1">
+      </div>
+      <div class="p-2 bd-highlight">
+        <label for="Password2">密码 (2)</label>
+        <input type="text" class="form-control" id="Password2">
+      </div>
+      <div class="p-2 bd-highlight">
+        <label for="Password3">密码 (3)</label>
+        <input type="text" class="form-control" id="Password3">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="p-2 bd-highlight">
+        <label for="textarea1">删除列 (必填，列头同逗号分隔)</label>
+        <textarea required class="form-control" id="textarea1"
+          rows="3">客户姓名,证件号码,性别,催收评分,手机号码,身份证地址,公司名称,公司电话,联络人姓名,联络电话,贷款产品,GPS地址,GPS省份,客户归属地</textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" id="delete-Column-button">批量删除列</button>
+  
+    </div>
+
+  </form>
+  </div>
+  </body>
+  <script src="renderer.js"></script>
+
+</html>
